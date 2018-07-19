@@ -1,31 +1,28 @@
 /**
  * Created by darwinmorocho on 19/7/18.
  */
-import {createStore, applyMiddleware} from 'redux'
+import {createStore, applyMiddleware, combineReducers} from 'redux'
 import thunk from 'redux-thunk';
 
-
-const reducer = (state, action) => {
+//reducer producs
+const products = (state = [], action) => {
     if (action.type === 'READ_PRODUCTS') {
-        return {
-            ...state,
-            products: action.products
-        }
+        return action.products
     }
 
+
+    return state;
+};
+
+//reducer cart
+const cart = (state = [], action) => {
     if (action.type === 'ADD_TO_CART') {
-        return {
-            ...state,
-            cart: state.cart.concat(action.product)
-        }
+        return state.concat(action.product)
     }
 
 
     if (action.type === 'REMOVE_FROM_CART') {
-        return {
-            ...state,
-            cart: state.cart.filter(product => product.id !== action.product.id)
-        }
+        return state.filter(product => product.id !== action.product.id)
     }
 
     return state;
@@ -45,7 +42,7 @@ const logger = ({getState}) => {
         // que un middleware anterior la haya modificado.
         return returnValue
     }
-}
+};
 
 
-export default createStore(reducer, {cart: [], products: []}, applyMiddleware(logger, thunk))
+export default createStore(combineReducers({cart: cart, products: products}), applyMiddleware(logger, thunk))
