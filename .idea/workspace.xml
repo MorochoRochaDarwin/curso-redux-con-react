@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62f211d9-2abb-40d9-a8c8-28a77f254a81" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ShoppingCart.js" afterPath="$PROJECT_DIR$/src/components/ShoppingCart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store.js" afterPath="$PROJECT_DIR$/src/store.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="store.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="61" lean-forward="false" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+            <state relative-caret-position="375">
+              <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -40,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductList.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ProductList.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="557">
@@ -48,6 +47,16 @@
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/products.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,6 +121,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
@@ -120,7 +130,13 @@
       <find>m</find>
       <find>make</find>
       <find>makei</find>
+      <find>image</find>
     </findStrings>
+    <replaceStrings>
+      <replace>&quot;id&quot;</replace>
+      <replace>&quot;name&quot;</replace>
+      <replace>&quot;image&quot;</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,9 +147,10 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/actionCreators.js" />
         <option value="$PROJECT_DIR$/src/components/ProductList.js" />
-        <option value="$PROJECT_DIR$/src/store.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/ShoppingCart.js" />
+        <option value="$PROJECT_DIR$/products.json" />
+        <option value="$PROJECT_DIR$/src/store.js" />
       </list>
     </option>
   </component>
@@ -308,12 +325,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532024815412</updated>
-      <workItem from="1532024816734" duration="2287000" />
+      <workItem from="1532024816734" duration="2841000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2287000" />
+    <option name="totallyTimeSpent" value="2841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1600" height="877" extended-state="6" />
@@ -422,14 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="61" lean-forward="false" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-redux/lib/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -473,6 +482,22 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

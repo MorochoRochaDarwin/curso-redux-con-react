@@ -1,7 +1,7 @@
 /**
  * Created by darwinmorocho on 19/7/18.
  */
-import {createStore} from 'redux'
+import {createStore, applyMiddleware} from 'redux'
 
 
 const reducer = (state, action) => {
@@ -25,4 +25,20 @@ const reducer = (state, action) => {
 };
 
 
-export default createStore(reducer, {cart: []})
+const logger = ({getState}) => {
+    return (next) => (action) => {
+        console.log('will dispatch', action)
+
+        // Llama al siguiente método dispatch en la cadena de middlewares
+        let returnValue = next(action)
+
+        console.log('state after dispatch', getState())
+
+        // Este seguramente sera la acción, excepto
+        // que un middleware anterior la haya modificado.
+        return returnValue
+    }
+}
+
+
+export default createStore(reducer, {cart: []}, applyMiddleware(logger))
