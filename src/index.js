@@ -5,6 +5,10 @@ import './index.css';
 import store from './store'//importamos el store de reduc
 
 import {Provider} from 'react-redux'
+import {readProducts} from './actionCreators'
+
+
+store.dispatch(readProducts());
 
 ReactDOM.render(
     <Provider store={store}>

@@ -2,9 +2,16 @@
  * Created by darwinmorocho on 19/7/18.
  */
 import {createStore, applyMiddleware} from 'redux'
+import thunk from 'redux-thunk';
 
 
 const reducer = (state, action) => {
+    if (action.type === 'READ_PRODUCTS') {
+        return {
+            ...state,
+            products: action.products
+        }
+    }
 
     if (action.type === 'ADD_TO_CART') {
         return {
@@ -41,4 +48,4 @@ const logger = ({getState}) => {
 }
 
 
-export default createStore(reducer, {cart: []}, applyMiddleware(logger))
+export default createStore(reducer, {cart: [], products: []}, applyMiddleware(logger, thunk))
